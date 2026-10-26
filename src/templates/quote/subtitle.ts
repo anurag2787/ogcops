@@ -58,7 +58,7 @@ const template: TemplateDefinition = {
     const quoteColor = lightBg && isLightColor(textColor) ? '#000000' : textColor;
     const quoteShadow = lightBg
       ? (isLightColor(quoteColor) ? '0 2px 4px rgba(0, 0, 0, 0.8)' : '0 1px 2px rgba(0, 0, 0, 0.15)')
-      : '0 2px 8px rgba(0, 0, 0, 0.85)';
+      : '0 2px 8px rgba(0, 0, 0, 0.8)';
 
     return {
       type: 'div',
@@ -80,13 +80,13 @@ const template: TemplateDefinition = {
               style: {
                 display: 'flex',
                 width: '1200px',
-                height: '52px',
+                height: '60px',
                 backgroundColor: '#000000',
                 alignItems: 'center',
                 justifyContent: 'center',
                 padding: '0 40px',
                 flexShrink: 0,
-                borderBottom: lightBg ? '1px solid rgba(0, 0, 0, 0.15)' : '1px solid rgba(255, 255, 255, 0.08)',
+                borderBottom: lightBg ? '1px solid rgba(0, 0, 0, 0.15)' : '1px solid rgba(255, 255, 255, 0.12)',
               },
               children: source
                 ? [
@@ -94,10 +94,11 @@ const template: TemplateDefinition = {
                       type: 'span',
                       props: {
                         style: {
-                          fontSize: '15px',
-                          fontWeight: 500,
-                          color: 'rgba(255, 255, 255, 0.7)',
-                          letterSpacing: '0.04em',
+                          fontSize: '14px',
+                          fontWeight: 600,
+                          color: 'rgba(255, 255, 255, 0.65)',
+                          letterSpacing: '0.08em',
+                          textTransform: 'uppercase',
                         },
                         children: source,
                       },
@@ -117,10 +118,10 @@ const template: TemplateDefinition = {
                 justifyContent: 'flex-end',
                 flex: 1,
                 width: '1200px',
-                padding: '40px 100px 48px 100px',
+                padding: '40px 100px 56px 100px',
                 background: lightBg
                   ? 'transparent'
-                  : 'linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 100%)',
+                  : 'linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.7) 100%)',
               },
               children: [
                 // Speaker
@@ -134,9 +135,9 @@ const template: TemplateDefinition = {
                             fontWeight: 600,
                             color: accentInk,
                             marginBottom: '16px',
-                            letterSpacing: '0.02em',
+                            letterSpacing: '0.03em',
                             textAlign: 'center',
-                            textShadow: lightBg ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.7)',
+                            textShadow: lightBg ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.8)',
                           },
                           children: author,
                         },
@@ -154,7 +155,7 @@ const template: TemplateDefinition = {
                       textAlign: 'center',
                       lineHeight: 1.35,
                       margin: 0,
-                      maxWidth: '1000px',
+                      maxWidth: '960px',
                       textShadow: quoteShadow,
                     },
                     children: quote,
@@ -170,10 +171,10 @@ const template: TemplateDefinition = {
               style: {
                 display: 'flex',
                 width: '1200px',
-                height: '52px',
+                height: '60px',
                 backgroundColor: '#000000',
                 flexShrink: 0,
-                borderTop: lightBg ? '1px solid rgba(0, 0, 0, 0.15)' : '1px solid rgba(255, 255, 255, 0.08)',
+                borderTop: lightBg ? '1px solid rgba(0, 0, 0, 0.15)' : '1px solid rgba(255, 255, 255, 0.12)',
               },
               children: [],
             },

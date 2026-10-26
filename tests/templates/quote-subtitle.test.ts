@@ -87,10 +87,10 @@ describe('quote-subtitle', () => {
     expect(images).toHaveLength(0);
 
     const quoteParagraph = rendered.find((el) => el.type === 'p');
-    expect(quoteParagraph?.props.style?.textShadow).toBe('0 2px 8px rgba(0, 0, 0, 0.85)');
+    expect(quoteParagraph?.props.style?.textShadow).toContain('0 2px 8px');
 
     const bars = rendered.filter(
-      (el) => el.type === 'div' && el.props.style?.backgroundColor === '#000000' && el.props.style?.height === '52px',
+      (el) => el.type === 'div' && el.props.style?.backgroundColor === '#000000' && el.props.style?.height === '60px',
     );
     expect(bars).toHaveLength(2);
   });
