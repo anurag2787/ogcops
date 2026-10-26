@@ -8,3 +8,4 @@ export { default as quoteMinimalDash } from './minimal-dash';
 export { default as quotePhotoBackground } from './photo-background';
 export { default as quoteStickyNote } from './sticky-note';
 export { default as quoteCodeComment } from './code-comment';
+export { default as quoteSubtitle } from './subtitle';
