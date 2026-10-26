@@ -9,3 +9,4 @@ export { default as quotePhotoBackground } from './photo-background';
 export { default as quoteStickyNote } from './sticky-note';
 export { default as quoteCodeComment } from './code-comment';
 export { default as quoteSubtitle } from './subtitle';
+export { default as quoteArticleExcerpt } from './article-excerpt';
