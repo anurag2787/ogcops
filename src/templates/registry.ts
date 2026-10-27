@@ -323,10 +323,11 @@ import tutorialBeforeAfter from './tutorial/before-after';
 import tutorialGlossary from './tutorial/glossary';
 import tutorialPrerequisites from './tutorial/prerequisites';
 import tutorialErrorExplained from './tutorial/error-explained';
+import tutorialTil from './tutorial/til';
 
 [
   tutorialCourseCard, tutorialStepByStep, tutorialVideoLesson, tutorialDifficultyBadge,
   tutorialPlatformBranded, tutorialCodeTutorial, tutorialWorkshopBanner, tutorialCertification,
   tutorialQuizCard, tutorialCheatSheet, tutorialBeforeAfter, tutorialGlossary, tutorialPrerequisites,
-  tutorialErrorExplained,
+  tutorialErrorExplained, tutorialTil,
 ].forEach(registerTemplate);
