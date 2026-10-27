@@ -11,3 +11,4 @@ export { default as tutorialCheatSheet } from './cheat-sheet';
 export { default as tutorialGlossary } from './glossary';
 export { default as tutorialPrerequisites } from './prerequisites';
 export { default as tutorialBeforeAfter } from './before-after';
+export { default as tutorialErrorExplained } from './error-explained';

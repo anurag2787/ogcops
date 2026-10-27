@@ -320,9 +320,11 @@ import tutorialCheatSheet from './tutorial/cheat-sheet';
 import tutorialBeforeAfter from './tutorial/before-after';
 import tutorialGlossary from './tutorial/glossary';
 import tutorialPrerequisites from './tutorial/prerequisites';
+import tutorialErrorExplained from './tutorial/error-explained';
 
 [
   tutorialCourseCard, tutorialStepByStep, tutorialVideoLesson, tutorialDifficultyBadge,
   tutorialPlatformBranded, tutorialCodeTutorial, tutorialWorkshopBanner, tutorialCertification,
   tutorialQuizCard, tutorialCheatSheet, tutorialBeforeAfter, tutorialGlossary, tutorialPrerequisites,
+  tutorialErrorExplained,
 ].forEach(registerTemplate);
