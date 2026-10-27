@@ -131,6 +131,26 @@ describe('tutorial-error-explained', () => {
     expect(divs.every((child) => child.props.style?.display === 'flex')).toBe(true);
   });
 
+  it('aligns explanation labels with the first line using flex-start', () => {
+    const element = render({
+      meaning:
+        'You called .map() on a value that is still undefined, usually because the data has not loaded yet',
+    });
+    const all = getAllElements(element);
+    const meaningLabel = all.find(
+      (el) => el.type === 'span' && el.props.children === 'Meaning',
+    );
+    expect(meaningLabel?.props.style?.marginTop).toBe('4px');
+
+    const rows = all.filter(
+      (el) =>
+        el.type === 'div' &&
+        el.props.style?.gap === '20px' &&
+        el.props.style?.alignItems === 'flex-start',
+    );
+    expect(rows.length).toBe(2);
+  });
+
   it('renders a valid SVG image via Satori', async () => {
     const element = render(errorExplained.defaults);
     await expect(satori(element as any, { width: 1200, height: 630, fonts })).resolves.toMatch(/^<svg/);

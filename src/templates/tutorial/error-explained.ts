@@ -96,7 +96,7 @@ const template: TemplateDefinition = {
               props: {
                 style: {
                   display: 'flex',
-                  alignItems: 'baseline',
+                  alignItems: 'flex-start',
                   gap: '20px',
                 },
                 children: [
@@ -111,6 +111,7 @@ const template: TemplateDefinition = {
                         letterSpacing: '0.08em',
                         flexShrink: 0,
                         width: '105px',
+                        marginTop: '4px',
                       },
                       children: 'Meaning',
                     },
@@ -139,7 +140,7 @@ const template: TemplateDefinition = {
               props: {
                 style: {
                   display: 'flex',
-                  alignItems: 'baseline',
+                  alignItems: 'flex-start',
                   gap: '20px',
                 },
                 children: [
@@ -154,6 +155,7 @@ const template: TemplateDefinition = {
                         letterSpacing: '0.08em',
                         flexShrink: 0,
                         width: '105px',
+                        marginTop: '4px',
                       },
                       children: 'Fix',
                     },
