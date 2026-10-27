@@ -13,3 +13,4 @@ export { default as githubIssueCard } from './issue-card';
 export { default as githubPullRequest } from './pull-request';
 export { default as githubGoodFirstIssues } from './good-first-issues';
 export { default as githubMilestone } from './milestone';
+export { default as githubSponsorsGoal } from './sponsors-goal';
