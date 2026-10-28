@@ -10,3 +10,4 @@ export { default as newsletterSubscribeCard } from './subscribe-card';
 export { default as newsletterSponsor } from './sponsor';
 export { default as newsletterPoll } from './poll';
 export { default as newsletterWelcome } from './welcome';
+export { default as newsletterMembersOnly } from './members-only';
