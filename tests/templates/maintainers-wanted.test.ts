@@ -201,4 +201,22 @@ describe('github-maintainers-wanted', () => {
     expect(labelColor).toBe(mixColors('#58a6ff', '#000000', 0.45));
     expect(isLightColor(labelColor)).toBe(false);
   });
+
+  it('gives the help list a top margin when the stats row is hidden', () => {
+    const defaultElements = elements(tree());
+    const helpContainerWithStats = defaultElements.find((el) =>
+      Array.isArray(el.props.children) &&
+      el.props.children.length === 3 &&
+      el.props.style?.gap === '10px'
+    );
+    expect(helpContainerWithStats?.props.style?.marginTop).toBe('0px');
+
+    const noStatsElements = elements(tree({ stars: '', openIssues: '' }));
+    const helpContainerWithoutStats = noStatsElements.find((el) =>
+      Array.isArray(el.props.children) &&
+      el.props.children.length === 3 &&
+      el.props.style?.gap === '10px'
+    );
+    expect(helpContainerWithoutStats?.props.style?.marginTop).toBe('24px');
+  });
 });

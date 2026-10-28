@@ -432,6 +432,7 @@ const template: TemplateDefinition = {
                       flexDirection: 'column',
                       gap: '10px',
                       width: '100%',
+                      marginTop: statsItems.length > 0 ? '0px' : '24px',
                     },
                     children: helpRows,
                   },
