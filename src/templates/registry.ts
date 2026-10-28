@@ -147,6 +147,7 @@ import githubGoodFirstIssues from './github/good-first-issues';
 import githubMilestone from './github/milestone';
 import githubSponsorsGoal from './github/sponsors-goal';
 import githubSecurityAdvisory from './github/security-advisory';
+import githubMaintainersWanted from './github/maintainers-wanted';
 
 [
   githubRepoCard, githubContributionGraph, githubReadmeHero, githubReleaseNotes,
@@ -158,6 +159,7 @@ import githubSecurityAdvisory from './github/security-advisory';
   githubMilestone,
   githubSponsorsGoal,
   githubSecurityAdvisory,
+  githubMaintainersWanted,
 ].forEach(registerTemplate);
 
 // Event
