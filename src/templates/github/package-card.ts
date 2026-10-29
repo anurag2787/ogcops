@@ -54,7 +54,7 @@ const template: TemplateDefinition = {
   name: 'Package Card',
   category: 'github',
   description: 'Published package announcement with registry badge, version pill, pitch, downloads, license, and install command',
-  tags: ['github', 'package', 'npm', 'pypi', 'crates', 'open-source', 'library'],
+  tags: ['github', 'package', 'npm', 'pypi', 'crates', 'open-source'],
   fields: [
     {
       ...commonFields.title,
