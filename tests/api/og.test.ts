@@ -191,6 +191,19 @@ describe('resolveDimensions', () => {
     });
   });
 
+  it('rounds a fractional height to a whole number', () => {
+    expect(resolveDimensions(undefined, 315.6)).toEqual({
+      success: true,
+      width: 602,
+      height: 316,
+    });
+    expect(resolveDimensions(undefined, 175.2)).toEqual({
+      success: true,
+      width: 333,
+      height: 175,
+    });
+  });
+
   it('derives width when only height is supplied', () => {
     expect(resolveDimensions(undefined, 315)).toEqual({
       success: true,
@@ -224,6 +237,11 @@ describe('resolveDimensions', () => {
       success: true,
       width: 2400,
       height: 1260,
+    });
+    expect(resolveDimensions(600.4, 315.2)).toEqual({
+      success: true,
+      width: 600,
+      height: 315,
     });
   });
 
@@ -558,7 +576,7 @@ describe('OG API dimension resolution and scaling', () => {
     );
   });
 
-  it('scales down to 601 when height is fractional', async () => {
+  it('scales down to a whole-number width when height is fractional', async () => {
     const { renderToPng } = await import('@/lib/og-engine');
     vi.mocked(renderToPng).mockClear();
 
@@ -566,7 +584,7 @@ describe('OG API dimension resolution and scaling', () => {
     expect(res.status).toBe(200);
     expect(renderToPng).toHaveBeenCalledWith(
       expect.anything(),
-      { width: 1200, height: 630, scaleDown: 601 }
+      { width: 1200, height: 630, scaleDown: 602 }
     );
   });
 

@@ -53,6 +53,7 @@ export function resolveDimensions(
   height?: number
 ): DimensionResolution {
   if (width !== undefined) width = Math.round(width);
+  if (height !== undefined) height = Math.round(height);
 
   if (width !== undefined && (width < OG_MIN_WIDTH || width > OG_MAX_WIDTH)) {
     return {
